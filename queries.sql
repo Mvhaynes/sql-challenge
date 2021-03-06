@@ -49,4 +49,5 @@ where dept_emp.dept_no in
 
 -- frequency count of employee last names in descending order
 select last_name, count(last_name) from employees
-group by last_name;
+group by last_name
+order by last_name desc;
