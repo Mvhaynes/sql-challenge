@@ -36,5 +36,14 @@ where dept_emp.dept_no in
 	where dept_name = 'Sales'
 );
 
-			 
+-- List all employees in the Sales and Development departments with: employee number, last name, first name, and department name.
+select employees.first_name, employees.last_name, dept_emp.emp_no, departments.dept_name
+from dept_emp
+join employees on dept_emp.emp_no = employees.emp_no
+join departments on dept_emp.dept_no = departments.dept_no
+where dept_emp.dept_no in 
+(
+	select dept_no from departments
+	where dept_name = 'Sales' or dept_name = 'Finance'
+);			 
 			 
