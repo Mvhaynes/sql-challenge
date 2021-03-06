@@ -1,13 +1,13 @@
 -- Titles table
 create table titles (
-	title_id varchar primary key,
+	title_id varchar primary key not null,
 	title varchar
 );
 
 -- Employees table
 create table employees (
-	emp_no int primary key,
-	emp_title_id varchar,
+	emp_no int primary key not null,
+	emp_title_id varchar not null,
 	birth_date date,
 	first_name varchar,
 	last_name varchar,
@@ -18,29 +18,29 @@ create table employees (
 
 -- Departments table
 create table departments (
-	dept_no varchar primary key,
+	dept_no varchar primary key not null,
 	dept_name varchar
 );
 
 -- Department employees table
 create table dept_emp (
-	emp_no int,
-	dept_no varchar,
+	emp_no int not null,
+	dept_no varchar not null,
 	foreign key (emp_no) references employees(emp_no),
 	foreign key (dept_no) references departments(dept_no)
 );
 
 -- Department managers table
 create table dept_manager (
-	dept_no varchar,
-	emp_no int,
+	dept_no varchar not null,
+	emp_no int not null,
 	foreign key (emp_no) references employees(emp_no),
 	foreign key (dept_no) references departments(dept_no)
 );
 
 -- Salaries table 
 create table salaries (
-	emp_no int,
+	emp_no int not null,
 	salary int,
 	foreign key (emp_no) references employees(emp_no)
 );
