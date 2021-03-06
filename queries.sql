@@ -26,14 +26,15 @@ from employees
 where first_name = 'Hercules' and last_name like 'B%';
 
 -- List all employees in the Sales department with: employee number, last name, first name, and department name.
-select first_name, last_name, emp_no
-from employees
-where emp_no in
+select employees.first_name, employees.last_name, dept_emp.emp_no, departments.dept_name
+from dept_emp
+join employees on dept_emp.emp_no = employees.emp_no
+join departments on dept_emp.dept_no = departments.dept_no
+where dept_emp.dept_no in 
 (
-	select emp_no from dept_emp
-	where dept_no in 
-	(
-		select dept_no from departments
-		 where dept_name = 'Sales'
-	)
+	select dept_no from departments
+	where dept_name = 'Sales'
 );
+
+			 
+			 
