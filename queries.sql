@@ -45,5 +45,9 @@ where dept_emp.dept_no in
 (
 	select dept_no from departments
 	where dept_name = 'Sales' or dept_name = 'Finance'
-);			 
-			 
+);	
+
+-- frequency count of employee last names in descending order
+select last_name, count(last_name) from employees
+group by last_name;
+
