@@ -1,1 +1,1 @@
-# sql-challenge
+# sql-employee-db
