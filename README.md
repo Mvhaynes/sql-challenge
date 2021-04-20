@@ -1,11 +1,9 @@
-<<<<<<< HEAD
+
 # sql-challenge
 
-![image]('Relational_diagram.png')
+![image](Relational_diagram.png)
 
 SQL query using the relational diagram to find the following: 
-
-
 
 * details of each employee: employee number, last name, first name, sex, and salary.
 * first name, last name, and hire date for employees who were hired in 1986.
