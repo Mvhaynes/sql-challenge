@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # sql-challenge
 
-[!image]('Relational_diagram.png')
+![image]('Relational_diagram.png')
 
 SQL query using the relational diagram to find the following: 
 
@@ -15,6 +15,4 @@ SQL query using the relational diagram to find the following:
 * all employees in the Sales department, including their employee number, last name, first name, and department name.
 * all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 * frequency count of employee last names.
-=======
-# sql-employee-db
->>>>>>> 6b247dfd7b9d833283a1b5f223ccd4b849fc8f7a
+
